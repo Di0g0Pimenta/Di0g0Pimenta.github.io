@@ -18,3 +18,15 @@ function Notas() {
     div.appendChild(label);
     div.appendChild(document.createElement("br"));
 }
+
+function removerNotas() {
+    // Obtém todos os elementos de checkbox com a classe "form-check-input"
+    var checkboxes = document.querySelectorAll('.form-check-input');
+
+    // Itera sobre os elementos de checkbox e remove aqueles que estão marcados
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            checkbox.parentElement.removeChild(checkbox);
+        }
+    });
+}
